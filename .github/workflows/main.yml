@@ -2,13 +2,13 @@ name: Automated Data Transformation
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     # pull_request:
     #   branches:
     #     - main
-    paths:
-      - 'ecommerce_customer_churn_dataset_raw.csv'  
+    # paths:
+    #   - 'ecommerce_customer_churn_dataset_raw.csv'  
 
 jobs:
   transform:

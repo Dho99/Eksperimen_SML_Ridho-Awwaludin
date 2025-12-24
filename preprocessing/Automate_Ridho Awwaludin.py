@@ -62,7 +62,7 @@ def preprocess_data(data, target_column, save_path, output_csv_path):
 
     df_final.to_csv(output_csv_path, index=False)
     
-    dump(preprocessor, 'preprocessor.joblib')
+    dump(preprocessor, save_path)
     
     print(f"Pipeline berhasil dijalankan. CSV disimpan di: {output_csv_path}")
     return df_final, preprocessor

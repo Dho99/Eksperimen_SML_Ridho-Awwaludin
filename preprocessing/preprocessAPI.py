@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 def prediction(data_df):
-    url = "http://127.0.0.1:5002/detect_churn"
+    url = "http://127.0.0.1:5002/invocations"
     headers = {"Content-Type": "application/json"}
     
     # Konversi DataFrame ke format yang dipahami MLflow (split format)
@@ -13,6 +13,7 @@ def prediction(data_df):
     
     # Kirim permintaan POST
     response = requests.post(url, data=json.dumps(data_json), headers=headers)
+    print(response)
     
     if response.status_code == 200:
         predictions = response.json().get("predictions")
